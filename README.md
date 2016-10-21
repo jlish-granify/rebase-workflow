@@ -16,4 +16,4 @@ Some commands that I use during a rebase workflow
 
 Some pitfalls to avoid:
 - Don't rebase during a PR review.  You'll confuse your reviewers.
-- Don't rebase when multiple people are working on the same branch.  You will "pull the rug from underneath your colleague" so to speak.  If you absolutely must, then communication with your team your intentions and instruct them to save their commits elsewhere, `git reset --hard origin/<branch name>` and then cherry-pick their commits back into the their workspace.
+- Don't rebase when multiple people are working on the same branch.  You will "pull the rug out from underneath your colleague" so to speak.  If you absolutely must, then communication with your team your intentions and instruct them to save their commits elsewhere, `git reset --hard origin/<branch name>` and then cherry-pick their commits back into the their workspace.
