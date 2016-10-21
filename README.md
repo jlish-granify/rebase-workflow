@@ -12,3 +12,8 @@ Some commands that I use during a rebase workflow
 - `git log -3` to look at your new commit history after you’ve rebased (`q` to exit the log command if necessary).  Pay attention to not only your own commits but that the commits before yours match what is remote master.
 - `git diff` to look at the code diff of the newly rebased code (`q` to exit the diff command if necessary).
 - `git push --force origin <your branch>` to upload your rebased code to the remote repository.
+
+
+Some pitfalls to avoid:
+- Don't rebase during a PR review.  You'll confuse your reviewers.
+- Don't rebase when multiple people are working on the same branch.  You will "pull the rug from underneath your colleague" so to speak.  If you absolutely must, then communication with your team your intentions and instruct them to save their commits elsewhere, `git reset --hard origin/<branch name>` and then cherry-pick their commits back into the their workspace.
